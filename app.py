@@ -9,7 +9,6 @@ pic = os.path.join(app.config["UPLOAD_FOLDER"],"angel.jpeg")
 def index():
 	flash("what's your name?")
 	return render_template("index.html",pic1=pic)
-
 @app.route("/greet", methods=['POST', 'GET'])
 def greeter():
 	flash("Hi " + str(request.form['name_input']) + ", great to see you!")
